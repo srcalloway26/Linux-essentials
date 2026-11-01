@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a1221">
+<title>Linux Essentials — Autosave Practice</title>
+<style>
+:root{color-scheme:dark;--bg:#0a1221;--card:#121e31;--card2:#17253b;--line:#30415b;--text:#edf4ff;--muted:#a8bbd0;--accent:#75d8d7;--blue:#9dbcfb;--good:#80e5b8;--bad:#ff9f9f;--gold:#ffd18a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 90% 40% at 50% -8%,#1b3654 0,transparent 100%),var(--bg);color:var(--text);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.shell{max-width:860px;margin:0 auto;padding:21px 18px 45px}.hero{padding:12px 0 19px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:800;color:var(--accent);text-transform:uppercase}.hero h1{margin:4px 0;font-size:clamp(26px,5vw,36px);letter-spacing:-.04em;line-height:1.15}.lead{margin:8px 0 0;color:var(--muted);font-size:14px}.pill{padding:7px 11px;white-space:nowrap;border:1px solid var(--line);border-radius:100px;font-size:12px;color:var(--muted);background:#122336}.panel{border:1px solid var(--line);background:rgba(18,30,49,.95);border-radius:19px;padding:22px;box-shadow:0 14px 42px #0002;margin-bottom:18px}.panel h2{margin:0 0 8px;line-height:1.25;font-size:22px}.panel p{color:var(--muted);margin:6px 0 14px}.buttonRow{display:flex;flex-wrap:wrap;gap:10px}.btn{border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:12px;padding:12px 16px;min-height:46px;font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#08232d}.btn.secondary{background:#263f5b;border-color:#3b5874}.btn.danger{border-color:#754651;color:#ffd1d1}.btn:disabled{opacity:.38;cursor:default}.btn.small{min-height:38px;padding:8px 12px;font-size:14px}.full-mobile{flex-grow:1}.hide{display:none!important}.note{border-radius:12px;background:#1a3440;color:#c5f1e7;border:1px solid #356d70;padding:12px 14px;font-size:14px;margin:14px 0}.warning{background:#3b2d27;border-color:#836350;color:#ffe6cb}.error{background:#41212a;border-color:#8f4d5c;color:#ffd4dc}a{color:var(--accent)}.micro{color:var(--muted);font-size:13px}.meta{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;color:var(--muted);font-size:13px;font-weight:700}.progressTrack{height:9px;border-radius:20px;background:#263b56;overflow:hidden;margin:12px 0 22px}.progressFill{height:100%;width:0;background:linear-gradient(90deg,#54bdd7,#79e2ba);transition:width .15s}.questionTitle{font-size:20px;letter-spacing:-.01em;line-height:1.45;white-space:pre-line;margin:10px 0 18px;overflow-wrap:anywhere}.tag{border-radius:7px;background:#20364a;padding:5px 9px;color:#bde0ff;font-size:12px;font-weight:700}.flagBtn{font-size:14px;background:transparent;color:var(--gold);border:1px solid #665943;padding:7px 10px;border-radius:9px}.flagBtn.active{background:#574626}.option{display:flex;gap:13px;align-items:flex-start;min-height:57px;padding:15px;border-radius:12px;border:1px solid var(--line);margin:10px 0;background:#15243a;cursor:pointer;overflow-wrap:anywhere}.option input{margin:4px 0 0;flex:0 0 18px;width:18px;height:18px;accent-color:#78dfcb}.option.selected{border-color:#60aebb;background:#1b3a4d}.option.correct{border-color:#5fae8a;background:#14372f}.option.wrong{border-color:#da7878;background:#3d222d}.option b{font-weight:500}.qTop{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.navRow{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;padding-top:15px}.navRow .btn{flex:1}.resultsScore{font-size:57px;font-weight:850;letter-spacing:-.07em;line-height:1.1;color:var(--accent)}.reviewNote{padding:12px;border-radius:11px;border:1px solid #315e53;background:#18352d;color:#a8f8cd;margin-top:18px}.reviewNote.incorrect{background:#3a242c;border-color:#7a464d;color:#ffd1d1}.gridJump{display:grid;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:9px;padding-top:14px}.num{min-height:44px;background:#20334d;border:1px solid #39516f;border-radius:8px;color:var(--text);font-weight:800}.num.done{background:#17594d;border-color:#39836c}.num.flagged:after{content:'•';color:var(--gold);padding-left:3px}.num.current{outline:2px solid var(--accent);outline-offset:1px}.num.incorrect{border-color:#b76572;background:#57323a}.summary{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px;padding:7px 0 16px}.summary strong{color:var(--text)}.reviewList{padding:0;list-style:none}.reviewList li{margin:9px 0}.reviewItem{width:100%;text-align:left;background:#17283e;color:var(--text);padding:13px;border:1px solid var(--line);border-radius:10px}.reviewItem small{display:block;color:var(--muted);font-size:12px}.attribution{text-align:center;color:var(--muted);font-size:12px;padding:5px 10px}.toolLine{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between}.labelledFile{display:inline-flex;cursor:pointer;align-items:center;justify-content:center}.labelledFile input{display:none}.toast{margin:10px 0 0;color:var(--muted);font-size:13px}details summary{font-weight:700;cursor:pointer;color:var(--blue);padding:10px 0}details[open] summary{margin-bottom:7px}#backupFile,#bankFile{display:none}@media(max-width:470px){.shell{padding:15px 12px 30px}.panel{padding:17px}.hero{align-items:center}.hero h1{font-size:26px}.pill{font-size:10px}.btn{padding:11px 13px}.questionTitle{font-size:18px}.option{padding:13px}.navRow .btn{min-width:0}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <header class="hero"><div><div class="eyebrow">WGU D281 • LPI 010</div><h1>Linux Essentials<br>Practice + Autosave</h1><p class="lead">Original community question bank · Your progress stays on this device</p></div><div id="savePill" class="pill" aria-live="polite">Loading…</div></header>
+  <div id="alert" class="note hide" role="status"></div>
+  <section id="startView" class="panel hide">
+    <h2>Ready to practice?</h2><p id="questionCount">Loading questions…</p>
+    <div id="continueBar" class="hide"><button class="btn primary" id="continueBtn">Continue saved exam</button><div id="savedInfo" class="micro" style="margin-top:8px"></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"></div>
+    <div class="buttonRow"><button class="btn primary full-mobile" id="start40">40 random questions</button><button class="btn secondary full-mobile" id="startAll">All questions</button></div>
+    <p class="micro" style="margin-top:17px">Starting a new exam replaces your current saved session. Questions are randomized once, then kept in the same order when you return.</p>
+    <div class="buttonRow"><button class="btn small" id="importBackupStart">Restore an exam backup</button><button class="btn small" id="importBankStart">Load question file manually</button></div>
+  </section>
+  <section id="quizView" class="hide">
+    <div class="panel"><div class="meta"><span id="questionNumber">Question 1</span><span id="answerCount">0 answered</span></div><div class="progressTrack"><div class="progressFill" id="progressFill"></div></div>
+      <div class="qTop"><span id="multiTag" class="tag">Select one</span><button class="flagBtn" id="flagBtn">⚑ Flag for review</button></div>
+      <h2 class="questionTitle" id="questionText"></h2><div id="options"></div><div id="reviewNote" class="hide"></div>
+      <div class="navRow"><button class="btn secondary" id="prevBtn">← Previous</button><button class="btn primary" id="nextBtn">Next →</button></div>
+      <div class="navRow"><button class="btn" id="finishBtn">Submit exam</button><button class="btn" id="homeBtn">Exam menu</button></div>
+    </div>
+    <div class="panel"><details id="jumpDetails"><summary>Jump to a question / review flagged</summary><div class="micro">Green = answered · Gold dot = flagged</div><div id="jumpGrid" class="gridJump"></div></details></div>
+  </section>
+  <section id="resultsView" class="hide">
+    <div class="panel"><div class="eyebrow">Practice exam results</div><h2 style="margin-top:12px">Your score</h2><div id="score" class="resultsScore"></div><div id="scoreDetails" class="summary"></div>
+      <div class="buttonRow"><button class="btn primary" id="reviewMistakes">Review missed answers</button><button class="btn secondary" id="reviewAll">Review all answers</button></div>
+      <div class="buttonRow" style="margin-top:13px"><button class="btn small" id="newExamBtn">New exam</button><button class="btn small" id="backupResultsBtn">Download backup</button></div>
+    </div>
+    <div class="panel"><h2>Questions to revisit</h2><p>Missed answers and anything you flagged.</p><ul id="reviewList" class="reviewList"></ul></div>
+  </section>
+  <section class="panel"><div class="toolLine"><div><strong>Progress protection</strong><div class="micro">Autosaves after every answer, flag, and question change.</div></div><div class="buttonRow"><button class="btn small" id="backupBtn">Download backup</button><button class="btn small" id="restoreBtn">Restore backup</button></div></div><div class="toast" id="saveDetail"></div></section>
+  <footer class="attribution">Questions load from <a href="https://github.com/ThePrimoris/LPI-Essentials-Practice" target="_blank" rel="noopener noreferrer">ThePrimoris's public GitHub repository</a>. This independent practice interface is not affiliated with LPI, WGU, or the original author. Exam content is not guaranteed to match any live certification exam.</footer>
+  <input type="file" id="backupFile" accept="application/json,.json">
+  <input type="file" id="bankFile" accept="application/json,.json">
+</main>
+<script>
+'use strict';
+const BANK_KEY='lpi_practice_bank_v1';
+const SESSION_KEY='lpi_practice_session_v2';
+const urls=[
+  'https://raw.githubusercontent.com/ThePrimoris/LPI-Essentials-Practice/main/lpi_questions.json',
+  'https://theprimoris.github.io/LPI-Essentials-Practice/lpi_questions.json'
+];
+const $=id=>document.getElementById(id);
+let bank=[], bankMap=new Map(),session=null, storageOK=true;
+const randomize=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const idFor=(q,i)=>String(q.id??('q'+i));
+const normalize=data=>{
+  if(!Array.isArray(data)||!data.length)throw new Error('This is not a list of questions.');
+  const normalized=data.map((q,i)=>({id:idFor(q,i),question:String(q.question??''),options:q.options,answer:q.answer}));
+  if(normalized.some(q=>!q.question||!Array.isArray(q.options)||!q.options.length||!q.options.every(v=>typeof v==='string')||!Array.isArray(q.answer)||!q.answer.every(v=>typeof v==='string')))throw new Error('The question file has an unexpected format.');
+  if(new Set(normalized.map(q=>q.id)).size!==normalized.length)throw new Error('Question IDs are not unique.');
+  return normalized;
+};
+function readStore(key){try{return localStorage.getItem(key)}catch(e){storageOK=false;return null}}
+function writeStore(key,value){try{localStorage.setItem(key,value);storageOK=true;return true}catch(e){storageOK=false;setAlert('Safari is blocking local storage. Use Download backup and open the exam in normal Safari, not Private Browsing or an in-app preview.','error');return false}}
+function setAlert(message,kind='warning'){const el=$('alert');el.className='note '+kind;el.textContent=message;}
+function clearAlert(){$('alert').classList.add('hide')}
+function setBank(data){bank=normalize(data);bankMap=new Map(bank.map(q=>[q.id,q]));writeStore(BANK_KEY,JSON.stringify(bank));$('questionCount').textContent=bank.length+' questions available from the original GitHub question bank.'}
+async function loadBank(){let loaded=false;let cached=readStore(BANK_KEY);if(cached){try{setBank(JSON.parse(cached));loaded=true}catch(e){}}
+  if(!loaded){for(const url of urls){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);setBank(await r.json());loaded=true;break}catch(e){}}}
+  if(!loaded){setAlert('Cannot download questions from GitHub. Connect to the internet and reload, or tap “Load question file manually” after downloading lpi_questions.json from the original repository.','error');$('questionCount').textContent='Question bank unavailable — load it manually to continue.'}
+  return loaded;
+}
+function getSavedSession(){const raw=readStore(SESSION_KEY);if(!raw)return null;try{const x=JSON.parse(raw);if(x.version===2&&Array.isArray(x.order)&&x.order.length&&x.answers&&x.options&&x.flags&&typeof x.current==='number')return x}catch(e){}return null}
+function save(){if(!session){$('savePill').textContent=storageOK?'Ready':'Storage unavailable';$('saveDetail').textContent='No active exam yet.';return}session.updatedAt=new Date().toISOString();const ok=writeStore(SESSION_KEY,JSON.stringify(session));$('savePill').textContent=ok?'✓ Autosaved':'⚠ Backup needed';$('saveDetail').textContent=ok?'Stored in this browser on this device. Last saved '+new Date(session.updatedAt).toLocaleString()+'.':'Local storage unavailable. Download a backup to keep your answers.'}
+function counts(){let answered=0;for(const id of session.order){if((session.answers[id]||[]).length)answered++}return {answered,total:session.order.length}}
+function validSession(s){return !!s&&Array.isArray(s.order)&&s.order.length>0&&s.order.every(id=>bankMap.has(String(id)))}
+function getQuestion(){return bankMap.get(String(session.order[session.current]))}
+function hideViews(){for(const id of ['startView','quizView','resultsView'])$(id).classList.add('hide')}
+function showStart(){hideViews();$('startView').classList.remove('hide');if(session&&validSession(session)){const c=counts();$('continueBar').classList.remove('hide');$('savedInfo').textContent=`${c.answered} of ${c.total} answered • Last opened question ${session.current+1}`;}else{$('continueBar').classList.add('hide')}save();window.scrollTo(0,0)}
+function ensureSession(){if(!session||!validSession(session)){showStart();return false}session.current=Math.max(0,Math.min(session.current,session.order.length-1));return true}
+function createSession(mode){if(session&&validSession(session)&&!confirm('Start a new exam? This will replace your currently saved session. Download a backup first if you want to keep it.'))return;
+  if(!bank.length){setAlert('Questions are not loaded yet.','error');return}
+  const chosen=randomize(bank).slice(0,mode==='40'?Math.min(40,bank.length):bank.length);
+  const order=chosen.map(q=>q.id);const opts={};chosen.forEach(q=>{opts[q.id]=randomize(q.options)});
+  session={version:2,mode,order,options:opts,answers:{},flags:{},current:0,submitted:false,view:'quiz',startedAt:new Date().toISOString(),updatedAt:new Date().toISOString()};save();renderQuiz(true);
+}
+function renderQuiz(scroll=false){if(!ensureSession())return;hideViews();$('quizView').classList.remove('hide');session.view='quiz';
+  const q=getQuestion(),id=q.id,c=counts(),chosen=session.answers[id]||[],opts=session.options[id]||q.options;
+  $('questionNumber').textContent=`Question ${session.current+1} of ${session.order.length}`;
+  $('answerCount').textContent=`${c.answered} / ${c.total} answered`;
+  $('progressFill').style.width=(100*c.answered/c.total)+'%';
+  $('multiTag').textContent=q.answer.length>1?`Select ${q.answer.length} answers`:'Select one answer';
+  $('flagBtn').classList.toggle('active',!!session.flags[id]);$('flagBtn').textContent=session.flags[id]?'⚑ Flagged for review':'⚑ Flag for review';
+  $('questionText').textContent=q.question;const container=$('options');container.replaceChildren();
+  opts.forEach((opt,i)=>{
+    const label=document.createElement('label');label.className='option';if(chosen.includes(opt))label.classList.add('selected');
+    const input=document.createElement('input');input.type=q.answer.length>1?'checkbox':'radio';input.name='answer';input.value=opt;input.checked=chosen.includes(opt);input.disabled=session.submitted;
+    const txt=document.createElement('b');txt.textContent=String.fromCharCode(65+i)+'.  '+opt;
+    label.append(input,txt);
+    if(session.submitted){if(q.answer.includes(opt))label.classList.add('correct');else if(chosen.includes(opt))label.classList.add('wrong')}
+    container.append(label);
+  });
+  const review=$('reviewNote');review.classList.add('hide');if(session.submitted){const isRight=isCorrect(q,chosen);review.className='reviewNote'+(isRight?'':' incorrect');review.textContent=(isRight?'✓ Correct.':'✕ Incorrect.')+' Correct answer'+(q.answer.length===1?'':'s')+': '+q.answer.join(' • ')}
+  $('finishBtn').textContent=session.submitted?'View score':'Submit exam';
+  $('prevBtn').disabled=session.current===0;$('nextBtn').disabled=session.current===session.order.length-1;
+  renderJump();save();if(scroll)window.scrollTo(0,0);
+}
+function renderJump(){const grid=$('jumpGrid');grid.replaceChildren();session.order.forEach((id,i)=>{const btn=document.createElement('button');btn.type='button';btn.className='num';btn.textContent=i+1;if((session.answers[id]||[]).length)btn.classList.add('done');if(session.flags[id])btn.classList.add('flagged');if(i===session.current)btn.classList.add('current');if(session.submitted&&!isCorrect(bankMap.get(id),session.answers[id]||[]))btn.classList.add('incorrect');btn.dataset.index=i;grid.append(btn)})}
+function chooseAnswer(value,checked){if(!session||session.submitted)return;const q=getQuestion(),id=q.id;let selected=session.answers[id]||[];
+  if(q.answer.length>1){selected=checked?[...new Set([...selected,value])]:selected.filter(x=>x!==value)}else selected=[value];
+  session.answers[id]=selected;save();renderQuiz(false);
+}
+function changeQuestion(newIndex){if(newIndex<0||newIndex>=session.order.length)return;session.current=newIndex;renderQuiz(true)}
+function isCorrect(q,selected){return q.answer.length===selected.length&&q.answer.every(a=>selected.includes(a))}
+function scoreState(){let correct=0,missed=[],flagged=0;session.order.forEach((id,i)=>{const q=bankMap.get(id),s=session.answers[id]||[];if(isCorrect(q,s))correct++;else missed.push(i);if(session.flags[id])flagged++});return {correct,missed,flagged}}
+function submitExam(){if(session.submitted){renderResults();return}const c=counts();if(c.answered<c.total&&!confirm(`${c.total-c.answered} questions are still unanswered. Submit anyway?`))return;session.submitted=true;session.view='results';save();renderResults()}
+function renderResults(){if(!ensureSession())return;if(!session.submitted){renderQuiz(true);return}hideViews();$('resultsView').classList.remove('hide');session.view='results';const r=scoreState(),percent=Math.round(100*r.correct/session.order.length);$('score').textContent=percent+'%';$('scoreDetails').replaceChildren();
+  [['Correct',r.correct+' / '+session.order.length],['Incorrect',r.missed.length],['Flagged',r.flagged]].forEach(([label,value])=>{const span=document.createElement('span');span.textContent=label+': ';const strong=document.createElement('strong');strong.textContent=value;span.append(strong);$('scoreDetails').append(span)});
+  const list=$('reviewList');list.replaceChildren();const review=new Set([...r.missed,...session.order.map((id,i)=>session.flags[id]?i:-1).filter(i=>i>=0)]);if(!review.size){const li=document.createElement('li');li.textContent='No misses or flags. Great work.';list.append(li)}else{[...review].sort((a,b)=>a-b).forEach(i=>{const id=session.order[i],q=bankMap.get(id),li=document.createElement('li'),btn=document.createElement('button');btn.className='reviewItem';btn.dataset.index=i;const title=document.createElement('strong');title.textContent=`Question ${i+1}: ${q.question}`;const sub=document.createElement('small');sub.textContent=(r.missed.includes(i)?'Incorrect or unanswered':'Correct')+(session.flags[id]?' • Flagged':'');btn.append(title,sub);li.append(btn);list.append(li)})}
+  save();window.scrollTo(0,0)
+}
+function exportBackup(){if(!session){setAlert('No exam to back up yet.','warning');return}const payload={app:'LinuxEssentialsAutosave',exportVersion:1,savedAt:new Date().toISOString(),session};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='linux-exam-progress-'+new Date().toISOString().slice(0,10)+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);setAlert('Backup downloaded. Keep it in Files/iCloud Drive so you can restore your progress if Safari ever clears its storage.','')}
+async function importBackup(file){if(!file)return;try{const data=JSON.parse(await file.text()),s=data.session??data;if(s.version!==2||!Array.isArray(s.order)||!s.order.length||!s.answers||!s.options||!s.flags||typeof s.current!=='number')throw new Error('File is not a valid exam backup.');if(!validSession(s))throw new Error('This backup contains questions that are not in the currently loaded question bank.');if(session&&!confirm('Restore backup? This replaces your current saved exam.'))return;session=s;save();clearAlert();session.submitted&&session.view==='results'?renderResults():renderQuiz(true)}catch(e){setAlert('Could not restore exam: '+e.message,'error')}}
+async function importBank(file){if(!file)return;try{setBank(JSON.parse(await file.text()));clearAlert();if(session&&validSession(session))session.submitted&&session.view==='results'?renderResults():renderQuiz(true);else{session=null;showStart()}}catch(e){setAlert('Could not load question file: '+e.message,'error')}}
+function bind(){
+  $('start40').onclick=()=>createSession('40');$('startAll').onclick=()=>createSession('all');$('continueBtn').onclick=()=>session.submitted&&session.view==='results'?renderResults():renderQuiz(true);
+  $('prevBtn').onclick=()=>changeQuestion(session.current-1);$('nextBtn').onclick=()=>changeQuestion(session.current+1);$('homeBtn').onclick=showStart;
+  $('flagBtn').onclick=()=>{const id=getQuestion().id;session.flags[id]=!session.flags[id];renderQuiz(false)};
+  $('options').addEventListener('change',e=>{if(e.target.matches('input[name="answer"]'))chooseAnswer(e.target.value,e.target.checked)});
+  $('finishBtn').onclick=submitExam;$('jumpGrid').addEventListener('click',e=>{const btn=e.target.closest('[data-index]');if(btn)changeQuestion(Number(btn.dataset.index))});
+  $('backupBtn').onclick=exportBackup;$('backupResultsBtn').onclick=exportBackup;$('restoreBtn').onclick=()=>$('backupFile').click();$('importBackupStart').onclick=()=>$('backupFile').click();$('importBankStart').onclick=()=>$('bankFile').click();
+  $('backupFile').onchange=e=>{importBackup(e.target.files?.[0]);e.target.value=''};$('bankFile').onchange=e=>{importBank(e.target.files?.[0]);e.target.value=''};
+  $('reviewMistakes').onclick=()=>{const r=scoreState();if(!r.missed.length){renderResults();setAlert('You got every question right!','');return}changeQuestion(r.missed[0])};$('reviewAll').onclick=()=>changeQuestion(0);
+  $('reviewList').addEventListener('click',e=>{const btn=e.target.closest('[data-index]');if(btn)changeQuestion(Number(btn.dataset.index))});
+  $('newExamBtn').onclick=showStart;
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&session)save()});
+}
+async function init(){bind();session=getSavedSession();const loaded=await loadBank();if(!loaded){showStart();return}if(session&&!validSession(session)){session=null;setAlert('Found a previous save, but the question bank has changed. Restore a compatible backup or start again.','warning')}
+  if(session){if(session.submitted&&session.view==='results')renderResults();else renderQuiz(false)}else showStart();
+  if(!storageOK)setAlert('Local storage appears to be disabled. Save your exam with Download backup and use normal Safari.','error')
+}
+init();
+</script>
+</body>
+</html>
